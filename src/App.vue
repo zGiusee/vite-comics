@@ -17,8 +17,8 @@ export default {
 <template>
   <div>
     <AppHeader />
-    <AppFooter />
     <AppMain />
+    <AppFooter />
   </div>
 </template>
 
