@@ -51,13 +51,12 @@ export default {
             </div>
         </div>
 
-        <div class="info-banner-container py-5">
+        <div class="info-banner-container ">
             <div class="container">
                 <!-- INFO BANNER SECTION -->
                 <div class="row justify-content-between">
-                    <div class="col-2 d-flex align-items-center justify-content-center"
-                        v-for="(item, index) in infoBannerShop" :key="index">
-                        <div class="d-flex align-items-center justify-content-center">
+                    <div class="col-2" v-for="(item, index) in infoBannerShop" :key="index">
+                        <div class="d-flex h-100 align-items-center justify-content-center">
                             <img :src="getImagePath(item.img)" :alt="item.name">
                             <h5>{{ item.name }}</h5>
                         </div>
@@ -84,6 +83,7 @@ main {
 
     .info-banner-container {
         background-color: $dc_blue;
+        padding: 70px 0px;
 
         h5 {
             font-size: 15px;
@@ -94,7 +94,7 @@ main {
         img {
 
             width: 50px;
-            height: 63px
+            height: 62px
         }
 
         ;
