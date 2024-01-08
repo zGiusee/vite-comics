@@ -26,6 +26,12 @@ export default {
             ]
         }
     },
+    methods: {
+        getImagePath: function (imgPath) {
+            let url = new URL(imgPath, import.meta.url).href;
+            return url
+        }
+    },
 }
 </script>
 
@@ -45,13 +51,14 @@ export default {
             </div>
         </div>
 
-        <div class="info-banner-container py-4">
+        <div class="info-banner-container py-5">
             <div class="container">
                 <!-- INFO BANNER SECTION -->
                 <div class="row justify-content-between">
-                    <div class="col-2 " v-for="(item, index) in infoBannerShop" :key="index">
-                        <div>
-                            <img :src="item.img" alt="">
+                    <div class="col-2 d-flex align-items-center justify-content-center"
+                        v-for="(item, index) in infoBannerShop" :key="index">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img :src="getImagePath(item.img)" :alt="item.name">
                             <h5>{{ item.name }}</h5>
                         </div>
                     </div>
@@ -79,13 +86,15 @@ main {
         background-color: $dc_blue;
 
         h5 {
-            font-size: 17px;
+            font-size: 15px;
             color: white;
+            padding: 0px 15px;
         }
 
         img {
-            width: 100%;
 
+            width: 50px;
+            height: 63px
         }
 
         ;
