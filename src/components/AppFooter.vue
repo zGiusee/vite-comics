@@ -221,6 +221,7 @@ export default {
                 </div>
             </div>
         </div>
+
     </footer>
 </template>
 
@@ -292,23 +293,38 @@ footer {
             list-style-type: none;
             display: flex;
             margin-bottom: 0px;
+
+            li {
+                padding: 7px;
+                margin: 5px;
+                cursor: pointer;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                transition: all 0.5s;
+
+                &:hover {
+                    border: 1px solid $dc_blue;
+                    border-radius: 50%;
+                }
+            }
         }
 
-        ul li {
-            padding: 10px;
-            cursor: pointer;
+        .sign-up-button {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 7px 12px;
+            border: 3px solid $dc_blue;
+            transition: 0.5s;
+
+            &:hover {
+                border-radius: 20px;
+            }
         }
     }
 
     // BUTTONS
-    .sign-up-button {
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: none;
-        padding: 7px 12px;
-        border: 3px solid $dc_blue;
-    }
 
 }
 </style>

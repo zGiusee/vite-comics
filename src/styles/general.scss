@@ -1,8 +1,16 @@
+// BOOSTRAP
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 // GENERAL STYLES
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
 }

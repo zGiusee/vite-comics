@@ -78,7 +78,7 @@ export default {
           <div class="header-list-container h-100 d-flex align-items-center">
 
             <ul>
-              <li v-for="link, index in links" :key="index"><a :href="link.url">{{
+              <li v-for="link, index in links" :key="index"><a :href="link.url" :class="link.active ? 'active' : ''">{{
                 link.name }}</a></li>
             </ul>
 
@@ -87,6 +87,7 @@ export default {
 
       </div>
     </div>
+
   </header>
 </template>
 
@@ -113,19 +114,22 @@ header {
         padding: 18px;
         border: 3px solid transparent;
 
+        &.active,
         &:hover {
           border-bottom: 3px solid $dc_blue;
         }
 
-        a {
-          color: $dc_black;
-          text-decoration: none;
+      }
 
-          &:hover {
-            color: $dc_blue;
-          }
+      a {
+        color: $dc_black;
+        text-decoration: none;
 
+        &.active,
+        &:hover {
+          color: $dc_blue;
         }
+
       }
     }
   }
