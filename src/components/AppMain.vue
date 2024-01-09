@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            // ARRAY CHE CONTIENE GLI ELEMENTI DEL BANNER AZZURRO
             infoBannerShop: [
                 {
                     name: 'DIGITAL COMICS',
@@ -27,6 +28,7 @@ export default {
         }
     },
     methods: {
+        // FUNZIONE PER RECUPERARE IL PATH DELLE IMMAGINI
         getImagePath: function (imgPath) {
             let url = new URL(imgPath, import.meta.url).href;
             return url
@@ -38,11 +40,12 @@ export default {
 <template>
     <main>
 
+        <!-- MAIN CONTENT SECTION -->
         <div class='comics-card-container'>
             <div class="container">
-                <!-- MAIN CONTENT SECTION -->
+
                 <div class="row">
-                    <!-- COMICS CARD -->
+                    <!-- COMICS CARD SECTION-->
                     <div class="col-12">
                         <h3> Content goes here </h3>
                     </div>
@@ -51,16 +54,19 @@ export default {
             </div>
         </div>
 
+        <!-- INFO BANNER SECTION -->
         <div class="info-banner-container ">
             <div class="container">
-                <!-- INFO BANNER SECTION -->
+
                 <div class="row justify-content-between">
+
                     <div class="col-2" v-for="(item, index) in infoBannerShop" :key="index">
                         <div class="d-flex h-100 align-items-center justify-content-center">
                             <img :src="getImagePath(item.img)" :alt="item.name">
                             <h5>{{ item.name }}</h5>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -71,6 +77,7 @@ export default {
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
 
+// MAIN STYLES
 main {
     .comics-card-container {
         background-color: $dc_black;

@@ -76,10 +76,12 @@ export default {
         <!-- HEADER RIGHT SIDE (LIST) -->
         <div class="col-8">
           <div class="header-list-container h-100 d-flex align-items-center">
+
             <ul>
               <li v-for="link, index in links" :key="index"><a :href="link.url">{{
                 link.name }}</a></li>
             </ul>
+
           </div>
         </div>
 
@@ -92,33 +94,38 @@ export default {
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
 
-.logo {
-  width: 90px;
-}
+// HEADER STYLES
+header {
 
-.header-list-container {
-  vertical-align: middle;
+  .logo {
+    width: 90px;
+  }
 
-  ul {
-    list-style-type: none;
-    display: flex;
+  .header-list-container {
+    vertical-align: middle;
 
-    li {
-      padding: 18px;
-      border: 3px solid transparent;
+    // RIGHT SIDE HEADER LIST
+    ul {
+      list-style-type: none;
+      display: flex;
 
-      &:hover {
-        border-bottom: 3px solid $dc_blue;
-      }
-
-      a {
-        color: $dc_black;
-        text-decoration: none;
+      li {
+        padding: 18px;
+        border: 3px solid transparent;
 
         &:hover {
-          color: $dc_blue;
+          border-bottom: 3px solid $dc_blue;
         }
 
+        a {
+          color: $dc_black;
+          text-decoration: none;
+
+          &:hover {
+            color: $dc_blue;
+          }
+
+        }
       }
     }
   }

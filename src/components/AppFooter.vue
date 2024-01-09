@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            // FOOTER LIST ARRAY
             footerList: [
                 {
                     listTitle: 'DC COMICS',
@@ -124,6 +125,7 @@ export default {
                     ]
                 },
             ],
+            // SOCIAL CREDITS ARRAY
             Socials: [
                 {
                     socialLogo: '../img/footer-facebook.png',
@@ -149,6 +151,7 @@ export default {
         }
     },
     methods: {
+        // FUNZIONE PER RECUPERARE IL PATH DELLE IMMAGINI
         getImagePath: function (imgPath) {
             let url = new URL(imgPath, import.meta.url).href;
             return url
@@ -159,14 +162,16 @@ export default {
 
 <template>
     <footer>
-        <div class="footer-bg top-footer py-5">
+
+        <!-- TOP FOOTER -->
+        <div class="footer-bg py-5">
             <div class="container">
 
                 <div class="row">
 
-                    <!-- LEFT FOOTER SIDE -->
+                    <!-- LEFT TOP FOOTER SIDE -->
                     <div class="col-6">
-                        <div class="footer_list_container">
+                        <div class="top-footer">
                             <ul v-for="(list, index) in footerList" :key="index">
                                 <h3>
                                     {{ list.listTitle }}
@@ -178,7 +183,7 @@ export default {
                         </div>
                     </div>
 
-                    <!-- RIGHT FOOTER SIDE -->
+                    <!-- RIGHT TOP FOOTER SIDE -->
                     <div class="col-6">
                         <div class="d-flex justify-content-end ">
                             <img class="logo" src=" ../img/dc-logo-bg.png" alt="">
@@ -189,9 +194,11 @@ export default {
             </div>
         </div>
 
+        <!-- BOTTOM FOOTER -->
         <div class="bottom-footer">
             <div class="container">
                 <div class="row">
+
                     <!-- CREDITS SECTION -->
                     <div class="col-6">
                         <div class="d-flex align-items-center h-100">
@@ -199,6 +206,7 @@ export default {
                         </div>
                     </div>
 
+                    <!-- FOLLOW US BUTTON -->
                     <div class="col-6">
                         <div class="d-flex justify-content-end align-items-center">
                             <span>FOLLOW US</span>
@@ -209,6 +217,7 @@ export default {
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -219,6 +228,7 @@ export default {
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
 
+// FOOTER STYLES
 footer {
     position: relative;
 
@@ -234,7 +244,8 @@ footer {
         width: 650px;
     }
 
-    .footer_list_container {
+    // TOP FOOTER STYLES
+    .top-footer {
         display: flex;
         flex-wrap: wrap;
 
@@ -262,6 +273,7 @@ footer {
         }
     }
 
+    // BOTTOM FOOTER STYLES
     .bottom-footer {
         padding: 35px 0px;
         position: relative;
@@ -288,6 +300,7 @@ footer {
         }
     }
 
+    // BUTTONS
     .sign-up-button {
         color: white;
         font-weight: bold;
