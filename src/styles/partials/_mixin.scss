@@ -1,0 +1,21 @@
+@mixin default_btn {
+
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 7px 60px;
+    transition: 0.5s;
+
+    &:hover {
+        border-radius: 20px;
+    }
+
+}
+
+@mixin default_badge_bg {
+    color: white;
+    font-weight: bold;
+    padding: 12px 50px;
+    font-size: 23px;
+
+}

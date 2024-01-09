@@ -265,6 +265,8 @@ footer {
                 a {
                     text-decoration: none;
                     color: white;
+                    font-size: 14px;
+                    font-weight: lighter;
 
                     &:hover {
                         text-decoration: underline;

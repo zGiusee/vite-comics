@@ -63,11 +63,11 @@ export default {
 <template>
   <header>
     <div class="container">
-      <div class="row py-4">
+      <div class="row py-3">
 
         <!-- HEADER LEFT SIDE (LOGO) -->
         <div class="col-4">
-          <div>
+          <div class=" d-flex align-items-center h-100">
             <img class="logo" src="../img/dc-logo.png" alt="">
           </div>
         </div>
@@ -75,7 +75,7 @@ export default {
 
         <!-- HEADER RIGHT SIDE (LIST) -->
         <div class="col-8">
-          <div class="header-list-container h-100 d-flex align-items-center">
+          <div class="header-list-container">
 
             <ul>
               <li v-for="link, index in links" :key="index"><a :href="link.url" :class="link.active ? 'active' : ''">{{
@@ -99,7 +99,8 @@ export default {
 header {
 
   .logo {
-    width: 90px;
+    width: 65px;
+    vertical-align: middle;
   }
 
   .header-list-container {
@@ -109,6 +110,7 @@ header {
     ul {
       list-style-type: none;
       display: flex;
+      margin-bottom: 0px;
 
       li {
         padding: 18px;

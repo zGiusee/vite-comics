@@ -1,11 +1,13 @@
 <script>
 import InfoBanner from '../components/InfoBanner.vue'
 import ComicApp from '../components/ComicApp.vue'
+import MainJumbotron from '../components/MainJumbotron.vue'
 
 export default {
     components: {
         InfoBanner,
         ComicApp,
+        MainJumbotron
     },
     data() {
         return {
@@ -96,6 +98,9 @@ export default {
 
         <!-- MAIN CONTENT SECTION -->
 
+        <!-- JUMBOTRON COMPONENT -->
+        <MainJumbotron></MainJumbotron>
+
         <!-- COMICS CARD SECTION-->
         <div class='comics-card-container'>
             <div class="container">
@@ -103,6 +108,10 @@ export default {
                 <div class="row">
                     <!-- COMICS CARD COMPONENT -->
                     <ComicApp class="my-4" v-for="(comic, index) in comics" :key="index" :comic="comic"></ComicApp>
+
+                    <div class="text-center mt-5">
+                        <button type="button" class="default-btn"> LOAD MORE </button>
+                    </div>
                 </div>
 
             </div>
@@ -118,6 +127,7 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixin' as *;
 
 // MAIN STYLES
 main {
@@ -134,6 +144,13 @@ main {
     .info-banner-container {
         background-color: $dc_blue;
         padding: 70px 0px;
+    }
+
+    button {
+        @include default_btn;
+        background-color: $dc_blue;
+        border: 1px solid $dc_blue;
+        font-size: 14px;
     }
 
 
