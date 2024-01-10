@@ -1,6 +1,7 @@
 <script>
 export default {
     props: {
+        // PASSO LE PROPS (IN QUESTO CASO UN OGGETTO)
         comic: Object,
     }
 }
@@ -8,6 +9,7 @@ export default {
 
 <template>
     <div class="col-2">
+
         <!-- COMIC CARD -->
         <div>
             <div class="img-container p-relative">
@@ -18,6 +20,7 @@ export default {
                 <h5>{{ comic.series }}</h5>
             </div>
         </div>
+
     </div>
 </template>
 

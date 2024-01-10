@@ -11,6 +11,7 @@ export default {
     },
     data() {
         return {
+            // ARRAY DEI FUMETTI
             comics: [
                 {
                     "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",

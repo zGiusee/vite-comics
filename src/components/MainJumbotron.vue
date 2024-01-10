@@ -5,7 +5,6 @@
 <template>
     <div class="jumbo-container">
         <span class="default-badge-bg">CURRENT SERIES</span>
-
     </div>
 </template>
 

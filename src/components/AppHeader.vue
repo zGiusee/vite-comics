@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      // ARRAY OF HEADER NAV LINKS
       links: [
         {
           name: 'CHARACTERS',
@@ -78,8 +79,9 @@ export default {
           <div class="header-list-container">
 
             <ul>
-              <li v-for="link, index in links" :key="index"><a :href="link.url" :class="link.active ? 'active' : ''">{{
-                link.name }}</a></li>
+              <li v-for="link, index in links" :class="link.active ? 'active' : ''" :key="index"><a :href="link.url"
+                  :class="link.active ? 'active' : ''">{{
+                    link.name }}</a></li>
             </ul>
 
           </div>
@@ -122,19 +124,19 @@ header {
 
         }
 
-      }
+        a {
+          color: $dc_black;
+          text-decoration: none;
 
-      a {
-        color: $dc_black;
-        text-decoration: none;
+          &.active,
+          &:hover {
+            color: $dc_blue;
 
-        &.active,
-        &:hover {
-          color: $dc_blue;
+          }
 
         }
-
       }
+
     }
   }
 }
