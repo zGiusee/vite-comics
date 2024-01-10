@@ -16,7 +16,7 @@ export default {
         {
           name: 'MOVIES',
           url: '#',
-          active: false,
+          active: true,
         },
         {
           name: 'TV',
@@ -119,6 +119,7 @@ header {
         &.active,
         &:hover {
           border-bottom: 3px solid $dc_blue;
+
         }
 
       }
@@ -130,6 +131,7 @@ header {
         &.active,
         &:hover {
           color: $dc_blue;
+
         }
 
       }
