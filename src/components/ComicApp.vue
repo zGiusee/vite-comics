@@ -41,7 +41,7 @@ h5 {
 
     img {
         width: 190px;
-        height: 230px;
+        height: 190px;
         object-fit: cover;
         object-position: top;
         transition: 0.7s;
@@ -59,8 +59,8 @@ h5 {
         font-size: 13px;
         border-radius: 10px;
         position: relative;
-        bottom: 220px;
-        left: 153px;
+        bottom: 180px;
+        left: 155px;
         transition: 0.7s;
 
     }
